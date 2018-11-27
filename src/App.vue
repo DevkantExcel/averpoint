@@ -7,14 +7,14 @@
 </template>
 
 <script>
-import Home from './components/Home.vue'
+import Home from "./components/Home.vue";
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
     Home
   }
-}
+};
 </script>
 
 <style>
@@ -28,6 +28,6 @@ export default {
 } */
 #app {
   font-size: 14px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 </style>

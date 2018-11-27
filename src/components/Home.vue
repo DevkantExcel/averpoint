@@ -12,14 +12,14 @@
 
       <b-collapse is-nav id="nav_collapse">
 
-        <b-navbar-nav class="nav-bar ml-auto text-center" >
+        <b-navbar-nav class="nav-bar ml-auto text-center" style="padding: 0 0 0 50px;" >
           <b-nav-item class="active" href="#">Home</b-nav-item>
           <b-nav-item href="#">Portfolio</b-nav-item>
           <b-nav-item href="#">Create</b-nav-item>
           <b-nav-item href="#">About</b-nav-item>
         </b-navbar-nav>
 
-        <b-navbar-nav class="ml-auto text-center" >
+        <b-navbar-nav class="ml-auto text-center">
           <b-nav-form @submit.prevent class="custom-form-navbar" >
             <div class="custom-search" >
               <i class="fa fa-search twenty-min-ago" style="font-size:16px; transform: translateY(23%);" ></i>
@@ -29,7 +29,7 @@
         </b-navbar-nav>
 
         <!-- Right aligned nav items -->
-        <b-navbar-nav right class="ml-auto text-center">
+        <b-navbar-nav right class="ml-auto text-center" style="padding: 0px 70px 0px 0px;">
           <b-nav-item class="navbar-right-content" >
             <div class="float-left" >
               <img src="https://placekitten.com/g/30/30" alt="BV">
@@ -125,8 +125,7 @@
                             <b-badge pill append variant="primary badge-pos">14</b-badge>John Stewart
                           </span>
                       </h6>
-                      <em slot="footer">
-                       <!-- custom button -->
+                      <!-- <em slot="footer">
                        <b-container class="bv-example-row" >
                        <b-row >
                          <b-col lg="6" >
@@ -136,7 +135,7 @@
                               <i class="fa fa-plus" aria-hidden="true"></i>
                             </b-button>
                          </b-col>
-                       <!-- second btn -->
+
                          <b-col lg="6" >
                            <b-button variant="primary btn-custom-width">
                               <i class="fa fa-thumbs-down" aria-hidden="true"></i>
@@ -148,8 +147,7 @@
                        
                        </b-container>
                        
-                       <!-- custom button close -->
-                      </em>
+                      </em> -->
                      <b-card-body>
                        <h4 class="custom-title-padding" >I am John and think Jane makes a good Point in this Tweet:</h4>
                         <p class="card-text border-round">
@@ -178,6 +176,28 @@
                         <button class="btn-link-normal float-right" > <img class="glyphicons custom-style-upload" src="../../public/upload.png" width="10px" height="10px"> Publish</button>
                       </b-card-body>
                   </b-card>
+            <!-- ________________________________butttons herer ______________________________-->
+            <b-container class="bv-example-row" style="padding:20px 0 0 0;">
+                       <b-row no-guttersS>
+                         <b-col lg="6">
+                           <b-button variant="primary btn-custom-width">
+                              <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                              23 Supported <span class="custom-font-size">123 points</span> &nbsp;
+                              <i class="fa fa-plus" aria-hidden="true"></i>
+                            </b-button>
+                         </b-col>
+
+                         <b-col lg="6">
+                           <b-button variant="primary btn-custom-width right_button"  >
+                              <i class="fa fa-thumbs-down" aria-hidden="true"></i>
+                              12 Oppose <span class="custom-font-size">409 points</span> &nbsp;
+                              <i class="fa fa-plus" aria-hidden="true"></i>
+                            </b-button>
+                         </b-col>
+                       </b-row>
+                       
+              </b-container>
+            <!-- ________________________________butttons herer close__________________________ -->
                </b-col>
              </b-row>
             </b-col>
@@ -193,10 +213,11 @@
 <script>
 export default {
   name: "Home",
-  data: function () {
+  data: function() {
     return {
-      text: 'I am Jane and am stating an opinion on Twitter. Feel free to highlight and Point this on AverPoint!',
-    }
+      text:
+        "I am Jane and am stating an opinion on Twitter. Feel free to highlight and Point this on AverPoint!"
+    };
   }
 };
 </script>
@@ -207,7 +228,7 @@ export default {
 img {
   border-radius: 50%;
 }
-.nav-bar a{
+.nav-bar a {
   padding: 2em 0;
 }
 .nav-bar li {
@@ -249,7 +270,8 @@ img {
 .custom-top-authors {
   font-size: 18px;
 }
-.custom-search-field:focus , .custom-search-field  {
+.custom-search-field:focus,
+.custom-search-field {
   border: none;
   color: #495057;
   background-color: #fafdfe;
@@ -258,7 +280,8 @@ img {
   -webkit-box-shadow: none;
   box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0);
 }
-.custom-input-field:focus , .custom-input-field  {
+.custom-input-field:focus,
+.custom-input-field {
   border: none;
   color: #495057;
   background-color: #fff;
@@ -287,7 +310,7 @@ img {
   padding-bottom: 13px;
 }
 .color-blue {
-  color: 	#2B90CE;
+  color: #2b90ce;
   font-weight: 1000;
 }
 .twenty-min-ago {
@@ -358,6 +381,9 @@ img {
 .btn-custom-width {
   width: 100%;
   margin-bottom: 10px;
+}
+.right_button {
+  float: right;
 }
 .custom-padding-top {
   padding-top: 65px;
