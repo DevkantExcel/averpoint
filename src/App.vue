@@ -28,5 +28,6 @@ export default {
 } */
 #app {
   font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
 }
 </style>
